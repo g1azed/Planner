@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+  <h1 class="a11y-hidden">To do List</h1>
+  <main>
+
+    <div class="left-wrap">
+
+      <article class="today-short-wrapper">
+        <div class="today-short">
+          <p class="today-text"> Date. </p>
+          <p class="today-date"> 20230427</p>
+        </div>
+        <div class="today-short">
+          <p class="today-text"> Today. </p>
+          <label class="a11y-hidden" action="#"> 오늘의 기분</label>
+          <select class="today-date" name="today-feel">
+            <option value="good"> 😊 </option>
+            <option value="bad"> 😟 </option>
+            <option value="soso"> 😶 </option>
+          </select>
+        </div>
+        <div class="today-short">
+          <p class="today-text"> Time. </p>
+          <p class="today-date"> 13h 30m</p>
+        </div>
+      </article>
+
+
+
+      <article class="monthly-container">
+        <h2> Weekly Goal</h2>
+        <div class="grid-container">
+          <div class="grid-item day-text">일</div>
+          <div class="grid-item day-text">월</div>
+          <div class="grid-item day-text">화</div>
+          <div class="grid-item day-text">수</div>
+          <div class="grid-item day-text">목</div>
+          <div class="grid-item day-text">금</div>
+          <div class="grid-item day-text">토</div>
+
+          <div class="grid-item"><input type="text" placeholder="Enter goal"></div>
+          <div class="grid-item"><input type="text" placeholder="Enter goal"></div>
+          <div class="grid-item"><input type="text" placeholder="Enter goal"></div>
+          <div class="grid-item"><input type="text" placeholder="Enter goal"></div>
+          <div class="grid-item"><input type="text" placeholder="Enter goal"></div>
+          <div class="grid-item"><input type="text" placeholder="Enter goal"></div>
+          <div class="grid-item"><input type="text" placeholder="Enter goal"></div>
+          <div class="grid-item"><input type="text" placeholder="Enter goal"></div>
+          <div class="grid-item"><input type="text" placeholder="Enter goal"></div>
+          <div class="grid-item"><input type="text" placeholder="Enter goal"></div>
+          <div class="grid-item"><input type="text" placeholder="Enter goal"></div>
+          <div class="grid-item"><input type="text" placeholder="Enter goal"></div>
+          <div class="grid-item"><input type="text" placeholder="Enter goal"></div>
+          <div class="grid-item"><input type="text" placeholder="Enter goal"></div>
+          <div class="grid-item"><input type="text" placeholder="Enter goal"></div>
+          <div class="grid-item"><input type="text" placeholder="Enter goal"></div>
+          <div class="grid-item"><input type="text" placeholder="Enter goal"></div>
+          <div class="grid-item"><input type="text" placeholder="Enter goal"></div>
+          <div class="grid-item"><input type="text" placeholder="Enter goal"></div>
+          <div class="grid-item"><input type="text" placeholder="Enter goal"></div>
+          <div class="grid-item"><input type="text" placeholder="Enter goal"></div>
+        </div>
+      </article>
+
+      <article class="today-note-wrapper">
+        <div class="today-note">
+          <p> 오늘의 글귀 : </p>
+          <input type="text" placeholder="오늘의 글귀를 적어주세요">
+        </div>
+      </article>
+
+      <article id="calendar">
+        <h2 class="a11y-hidden">나의 머찐 달력</h2>
+        <table class="table-calendar">
+          <caption>
+            <time datetime="">
+              <span class="month"> 4 </span>월
+            </time>
+          </caption>
+          <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+          </tr>
+          <!-- <tr>
+                <td> &nbsp </td>
+                <td> &nbsp </td>
+                <td> &nbsp </td>
+                <td> &nbsp </td>
+                <td> &nbsp </td>
+                <td> &nbsp </td>
+                <td> &nbsp </td>
+            </tr> -->
+        </table>
+
+      </article>
+    </div>
+    <!-- left wrap end-->
+
+    <div class="right-wrap">
+      <article class="planner">
+        <h2 class="a11y-hidden"> 오늘의 할 일 </h2>
+
+        <form>
+          <label for="new-item"> 오늘의 할 일 추가 : </label>
+          <input type="text" id="new-item" size="95" maxlength="30">
+          <button type="submit"> + </button>
+        </form>
+
+        <div id="item-list">
+          <ul></ul>
+          <div class="button-wrap">
+            <button id="select-all"> Checked All</button>
+            <button id="delete-all"> Deleted All</button>
+          </div>
+        </div>
+        
+      </article>
+    </div>
+
+
+
+  </main>
+
+
+  <script src="./app.js"></script>
+  <script src="./calendar.js"></script>
+</body>
+
+</html>
